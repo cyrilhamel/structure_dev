@@ -1,0 +1,61 @@
+/*padding*/
+$padding1: 2rem 4rem 6rem 8rem;
+$padding2: 100px;
+/*charte graphique*/
+$color1: red;
+$color2: blue;
+$color3:green;
+$width:2600px;
+
+
+/*création d'une fonction */
+@function resize($type,$width){
+    $result:0 !default;
+    @if ($type=="margin"){
+        $marg:$width/100;
+        @return $marg
+    }@else{
+        $pad: $width/50;;
+    }
+    @return $pad;
+}
+
+
+
+@function calMargin($width){
+    $marg: $width/100;
+    @return $marg;
+}
+
+@function calPad($width){
+    $pad: $width/50;
+    @return $pad;
+}
+/*conditions*/
+
+
+/*code*/
+h1{
+    margin: resize("margin",$width);
+    color:$color1;
+}
+
+h2{
+    margin: resize("padding",$width);
+    color:$color2
+}
+p{
+    margin: resize("margin",$width);
+    color:$color3;
+}
+
+/*création d'une fonction */
+
+@function calMargin($width){
+    $resultat: $width/100;
+    @return $resultat;
+}
+
+@function calPad($nb){
+    @return $nb/50;
+}

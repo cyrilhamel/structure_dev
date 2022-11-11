@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<header>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-scroll">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#!">CraftY</a>
+          <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+            data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#!">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#!">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#!">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#!">Attractions</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#!">Opinions</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#!">Contact</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav d-flex flex-row">
+              <li class="nav-item me-3 me-lg-0">
+                <a class="nav-link" href="#!">
+                  <i class="fas fa-shopping-cart"></i>
+                </a>
+              </li>
+              <li class="nav-item me-3 me-lg-0">
+                <a class="nav-link" href="#!">
+                  <i class="fab fa-twitter"></i>
+                </a>
+              </li>
+              <li class="nav-item me-3 me-lg-0">
+                <a class="nav-link" href="#!">
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- Navbar -->
+    
+      <!--Section: Design Block-->
+      <section>
+        <div id="intro" class="bg-image" style="
+            background-image: url('https://mdbootstrap.com/img/Photos/new-templates/craftsman/img(1).jpg');
+            height: 100vh;
+          ">
+          <div class="mask" style="background-color: rgba(0, 0, 0, 0.2);">
+            <div class="container d-flex justify-content-center align-items-center h-100">
+              <div class="row align-items-center">
+                <div class="col-12">
+                  <h1 class="mb-0 text-white display-1">Studio</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+</header>
+<body>
+    <div class="container-lg text-center">
+        <div class="row">
+            <div class="col-lg-12 bordure ">
+                <p>Premier niveau avec 12 colonnes</p>
+                <div class="row">
+                    <div class="col-lg-8 bordure">
+                        <p>Second niveau avec 8 colonnes</p>
+                        <div class="row">
+                            <div class="col-lg-4 bordure align-self-start">
+                                <p>Troisième niveau avec 4 colonnes</p>
+                            </div>
+                            <div class="col-lg-6 offset-lg-2 bordure">
+                                <p>Troisième niveau avec 6 colonnes</p>
+                                <div class="row">
+                                    <div class="col-lg-3 offset-lg-1 bordure">
+                                        <p>Quatrième niveau avec 3 colonnes</p>
+                                    </div>
+                                    <div class="col-lg-5 offset-sm-1 bordure align-self-start">
+                                        <p>Quatrième niveau avec 5 colonnes</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 bordure align-self-start">
+                        <p>Second niveau avec 4 colonnes</p>
+                    </div>
+                </div>
+            </div>           
+        </div>
+        <div class="spinner-border spinner-border-sm text-warning" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+        <div class="spinner-grow spinner-grow-sm text-danger" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        <div class="progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
+        </div>
+        <button class="btn btn-primary bg-danger" type="button" disabled>
+            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+            Loading...
+          </button>
+    </div>
+
+    <script>src="js/bootstrap.bundle.min.js"</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+form{background-color: rgb(184, 181, 181);
+    width: 400px;
+height: 250px;
+border: solid 2px black;
+}
+h1{text-align: center;}
+
+input{margin: 5px 5px;}
+
+.pseudo{
+margin-left: 30px;
+margin-right: 20px;
+}
+.mdp{
+    margin-left: 30px;
+margin-right: 20px;}
+
+.check{margin-left: 30px;
+margin-right: 10px;}
+
+div{text-align: center;}
+.bouton{
+    margin-top: 20px;
+padding: 5px;
+background-color: white;
+box-shadow: 1px 1px 1px black;
+}
+.bouton:hover{background-color: black;
+color: white;}

@@ -1,0 +1,8 @@
+caption{color: purple;
+}
+table{border-collapse: collapse;
+    border: 2px solid purple;
+    width: 100%;
+}
+#tr1{background-color:rgb(45, 192, 250) ;}
+th, td{border: solid 2px black;text-align: center;}
