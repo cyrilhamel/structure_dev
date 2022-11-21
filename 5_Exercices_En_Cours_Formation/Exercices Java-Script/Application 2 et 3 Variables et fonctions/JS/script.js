@@ -133,18 +133,12 @@ class Complexe {
   getImaginaire() {
     return this.imaginaire;
   }
-
+// Ajoutez une méthode toString(), qui retourne le nombre sous la forme a+b*i
   toString() {
-    return ("attribut reel"+ this.reel + "attribut imaginaire"+ this.imaginaire)*i;
+    return "attribut reel"+ this.reel + "attribut imaginaire"+ this.imaginaire+"*"+"i";
   }
 
-  addition() {
-    result (z1+z2) = (this.reel+x)+i*(this.imaginaire+y);
-  }
+}
 
-soustraction() {
-  result (z1-z2) = (getReel()-x)+i*(getImaginaire()-y);
-}
-}
 
 
