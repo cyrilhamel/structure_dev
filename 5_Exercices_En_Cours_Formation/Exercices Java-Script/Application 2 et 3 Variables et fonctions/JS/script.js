@@ -229,8 +229,9 @@ semaine[1]="mar";
 document.write(semaine.length);
 document.write(semaine[2]);*/
 
-function dateFr(){
+/*function dateFr(){
   let nom = [];
+  let rang=prompt("choisissez un nom ou 0 pour lancer le tirage")
   nom.push(prompt("choisissez un nom ou 0 pour lancer le tirage"));
 if(nom.includes()!=0){
   let rang = Math.floor(Math.random()*nom.length);
@@ -242,6 +243,47 @@ if(nom.includes()!=0){
 }
 
 dateFr();
+
+function exoBizarre() {
+
+  let tab = [];
+
+  let util = prompt("veuillez écrire un truc")
+  while (util != 0) {
+      util = prompt("veuillez écrire un truc")
+
+      if (util != 0) {
+          tab.push(util);
+      } else if (util == 0) {
+          alert(tab[(Math.round(Math.random() * tab.length))]);
+      }
+      console.log(tab);
+  }
+
+}
+exoBizarre();*/
+
+/*function exo71(){
+  let winSize = width=700, height=700;
+    if(confirm("voulez vous ouvrir une nouvelle fenêtre?")){
+      window.open("https://www.adrar-formation.com/","",winSize);
+  }else{
+
+  }
+}
+exo71();*/
+
+/*function coordonnees(pos) {
+  let crd = pos.coords;
+
+  let latitude = crd.latitude; - 48.858370;
+  let longitude = crd.longitude - 2.294481;
+
+ console.log("latitude:" + latitude.toFixed(6), "longitude:" + longitude.toFixed(6));
+}
+navigator.geolocation.getCurrentPosition(coordonnees);*/
+
+
 
 
 
