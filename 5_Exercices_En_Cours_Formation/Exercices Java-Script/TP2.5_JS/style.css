@@ -1,0 +1,23 @@
+body{
+    background-color: darkcyan;
+}
+
+div{
+ text-align: center;   
+ 
+}
+h1{
+    color: white;
+}
+#consigne1{
+    color: orange;
+
+}
+#consigne2{
+    color: greenyellow;
+    
+}
+#consigne3{
+    color: darkslategray;
+    
+}
