@@ -1,0 +1,8 @@
+Nous aurions besoin d'un outils pour gérer les absences lié à la maladie
+ et au accident de travail dans l'entreprise :
+- il devra gérer les employés (nom, prénom, age, adresse, téléphone)
+- les employées auront un poste dans l'entreprise(nom_poste)
+- liste d'absence(date_début, date_reprise)
+- type d'absence(nom)
+- utilisateur(nom, login, mdp)
+- type utilisateur(nom)

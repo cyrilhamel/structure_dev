@@ -1,0 +1,14 @@
+Un club de foot à besoin de gérer ces adhérents, les équipes, 
+les compétitions, match ainsi que les résultats.
+joueur (nom, prenom, age, poste),
+equipe (nom),
+match (score equipe 1 et score equipe 2, phase, stade),
+competition (nom, date),
+stade (nom, adresse),
+-une équipe est composé de plusieurs joueur, un joueur fait partie d'une seule
+ équipe,
+-un match est joué par plusieurs équipe, un équipe peut jouer plusieurs match,
+
+-une competition comprend plusieurs match et 
+un  match est lié à une competition,
+-un match se déroule dans un stade, un stade peut recevoir plusieurs match.
