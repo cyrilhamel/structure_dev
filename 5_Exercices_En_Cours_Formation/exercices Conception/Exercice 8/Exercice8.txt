@@ -1,0 +1,30 @@
+Je désire réaliser un outils de gestion de blog.
+
+- j'ai besoin de pouvoir stocké mes articles de blog 
+(titre, contenu, description)
+
+- Chaque article peut être lié à une ou plusieurs catégorie
+
+- Chaque article peut être lié à un nuage de mot clé
+
+- chaque article peut avoir une image de présentation (url de l'image)
+
+- Je peux autoriser d'autre utilisateur à s'inscrire et se connecter 
+comme auteur
+
+- Ces auteurs pourront écrire des articles
+
+- Certains de ces articles peuvent être du contenu premium
+
+- Les visiteurs du site peuvent se connecter
+
+- Un visiteur connecté peut s'abonner et avoir accès au contenu premium
+
+- Les autres auront accès qu'à la description du contenu premium
+
+- Les auteurs ont automatiquement accès au contenu premium
+
+- Moi, les visiteurs et les auteurs peuvent 
+laisser des commentaires sous chaque article et leur donner une note
+
+- Chacun de nous peut aussi avoir une image d'avatar (url)
