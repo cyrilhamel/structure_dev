@@ -1,0 +1,150 @@
+-- creation de la base de donnéexecute
+create database EvalCinema;
+-- utilisation de la BDD
+use EvalCinema;
+
+-- creation table film
+create table film(
+id_film int primary key auto_increment not null,
+titre_film varchar(50) not null,
+duree_film time not null,
+producteur_film varchar(50)
+)engine=innodb;
+
+-- creation table cinema
+create table cinema(
+id_cinema int primary key auto_increment not null,
+nom_cinema varchar(50) not null,
+rue_cinema varchar(50) not null,
+id_cp int not null
+)engine=innodb;
+
+-- creation table ville
+create table ville(
+id_cp int primary key auto_increment not null,
+nom_ville varchar(50) not null
+)engine=innodb;
+
+-- creation table salle
+create table salle(
+id_salle int primary key auto_increment not null,
+capacite_salle int not null,
+id_cinema int not null
+)engine=innodb;
+
+-- creation table projection
+create table projection(
+id_film int not null,
+id_salle int not null,
+date_projection date,
+nbr_entre_projection int not null,
+primary key (id_film, id_salle)
+)engine=innodb;
+
+
+
+-- ajout de contrainte sur projection
+alter table projection
+add constraint fk_film_projection
+foreign key (id_film)
+references film(id_film);
+
+alter table projection
+add constraint fk_salle_projection
+foreign key (id_salle)
+references salle (id_salle);
+
+-- ajout contrainte sur cinema
+alter table cinema
+add constraint fk_cp_cinema
+foreign key (id_cp)
+references ville (id_cp);
+
+-- ajout contrainte sur salle
+alter table salle
+add constraint fk_cinema_salle
+foreign key (id_cinema)
+references cinema (id_cinema);
+
+-- insertion de données dans la table film
+insert into film(titre_film, duree_film, producteur_film) values
+("La Momie","01:30:00","Sean Daniel"),
+("Titanic","03:00:00","James Cameron"),
+("Avatar","03:20:00","James Cameron"),
+("Star Wars 4","01:50:00","George Lucas"),
+("Star Wars 5","01:45:00","George Lucas");
+
+-- insertion de données dans la table ville
+insert into ville(nom_ville) values
+("Pau"),
+("Tarbes"),
+("Lourdes"),
+("Nay"),
+("Argeles");
+
+-- insertion de données dans la table cinema
+insert into cinema(nom_cinema, rue_cinema, id_cp) values
+("Mega CGR","quartier libre",1),
+("Mega CGR","Arsenal",2),
+("Pax","Avenue de la grotte",3),
+("independant","route de Pau",4),
+("UGC","route de gavarnie",5);
+
+-- insertion de données dans la table salle
+insert into salle(capacite_salle,id_cinema) values
+(200,1),
+(220,2),
+(70,3),
+(50,4),
+(60,5);
+
+-- insertion de données dans la table projection
+insert into projection(id_film,id_salle,date_projection,nbr_entre_projection) values
+(1,2,"2010-10-25",180),
+(2,1,"1998-06-10",210),
+(3,3,"2023-01-18",70),
+(4,4,"1983-06-15",45),
+(5,5,"1986-07-12",55);
+
+
+-- 3- afficher l'ensemble des films avec une durée superieure à une heure
+select titre_film, timediff(duree_film) as "duree supp à 1h"
+from film
+group by titre_film
+having timediff(duree_film)> "01:00:00";
+
+
+-- 4- Affichez le nombre de salles de Cinémas ayant une capacité entre 20 et 80 sièges
+
+select capacite_salle, count(id_cinema) as "nombre de cinéma avec une capacité entre 20 et 80 places"
+from salle
+where capacite_salle between 20 and 80;
+
+-- 5- Affichez la liste des projections où le nombre d’entrées a dépassé 80% de la capacité de la salle
+
+
+
+
+-- 6- Affichez la capacité totale de chaque cinéma
+select
+salle.capacite_salle,
+cinema.id_cinema,count(salle.capacite_salle) as "nombre de places dans chaque cinema"
+from cinema
+inner join salle on cinema.id_cinema=salle.id_cinema
+group by cinema.id_cinema;
+
+
+-- 7 Supprimez les films qui ne sont pas projetés depuis 3ans ;
+
+delete from film
+where id_film in
+(
+select id_film
+from projection
+WHERE datediff(CURDATE(), projection.date_projection) > 365*3
+);
+
+-- 8 Doublez le nombre d’entrée de toutes les séances pour le film dont le titre est « Film1 »;
+
+
+

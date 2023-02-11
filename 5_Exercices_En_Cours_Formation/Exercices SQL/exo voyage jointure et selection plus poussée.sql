@@ -133,7 +133,7 @@ where id_client in
 (
 select id_client
 from inscrire
-WHERE datediff(CURDATE(), inscrire.date_inscrire) > 365*3
+WHERE datediff(CURDATE(), inscription.date_inscription) > 365*3
 );
 
 
